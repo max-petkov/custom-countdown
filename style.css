@@ -7,7 +7,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  overflow-y: hidden;
+  overflow: hidden;
   display: flex;
   align-items: center;
   font-family: "Nunito", sans-serif;
@@ -159,11 +159,30 @@ nav {
   position: absolute;
   top: 32px;
   left: 64px;
-  z-index: 1;
+  width: 100%;
+  z-index: 3;
 }
 
 .resources {
-  display: none;
+  /* display: none; */
+  position: relative;
+}
+
+.resources__item {
+  position: absolute;
+  transition: 0.3s;
+  left: -500px;
+}
+
+.resources__link {
+  font-size: 24px;
+  text-decoration: inherit;
+  color: #2f49df;
+  font-weight: bold;
+}
+
+.js-resources-active {
+  left: 0;
 }
 
 /* Media Query: Large Smartphone (Vertical) */
